@@ -20,6 +20,10 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func btnGoController(_ sender: UIButton) {
+        //self hace referencia a la vista, en php se entiende como $this
+        self.performSegue(withIdentifier: "transicion", sender:sender)
+    }
 
 }
 
