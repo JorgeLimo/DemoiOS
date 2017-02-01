@@ -144,10 +144,10 @@
             </objects>
             <point key="canvasLocation" x="1940" y="2129.6851574212897"/>
         </scene>
-        <!--View Controller-->
+        <!--Tercera View Controller-->
         <scene sceneID="DiP-An-5Wt">
             <objects>
-                <viewController id="pOe-Bb-pMa" sceneMemberID="viewController">
+                <viewController id="pOe-Bb-pMa" customClass="TerceraViewController" customModule="Navegation_in_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ato-Uw-Dbz"/>
                         <viewControllerLayoutGuide type="bottom" id="mE2-Cs-yCL"/>
@@ -163,27 +163,38 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bhF-OM-1L7">
+                                <frame key="frameInset" minX="139" minY="447" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QhN-7H-y7v">
-                                <frame key="frameInset" minX="153" minY="336" width="69" height="30"/>
+                                <frame key="frameInset" minX="166" minY="334" width="69" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Siguiente"/>
                                 <connections>
-                                    <segue destination="fsl-i3-KZF" kind="show" id="8Oe-w3-GSW"/>
+                                    <action selector="btnSiguienteCuarta:" destination="pOe-Bb-pMa" eventType="touchUpInside" id="ZUw-tY-gbo"/>
+                                    <segue destination="fsl-i3-KZF" kind="show" id="N0a-iZ-31G"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="dU1-IX-VJ7"/>
+                    <connections>
+                        <outlet property="txtTercera" destination="bhF-OM-1L7" id="gcG-ZV-WTb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rve-vz-2rX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3676" y="1712.2938530734634"/>
         </scene>
-        <!--View Controller-->
+        <!--Cuarta View Controller-->
         <scene sceneID="Qz5-dB-5bH">
             <objects>
-                <viewController id="fsl-i3-KZF" sceneMemberID="viewController">
+                <viewController id="fsl-i3-KZF" customClass="CuartaViewController" customModule="Navegation_in_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="VhY-tg-k9H"/>
                         <viewControllerLayoutGuide type="bottom" id="LF6-19-C6T"/>
@@ -199,9 +210,19 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zpc-L0-bq4">
+                                <frame key="frameInset" minX="166" minY="416" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="lblmsj" destination="zpc-L0-bq4" id="TwI-gV-44A"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xFW-rF-J8w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -226,11 +247,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HeN-fq-V0d">
-                                <frame key="frameInset" minX="139" minY="509" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Regresar"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -244,7 +260,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dOH-n5-0f0" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Nb7-iK-ZFv">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Nb7-iK-ZFv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -268,6 +284,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Aq6-Dw-45t" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="yv7-qv-Clz">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
